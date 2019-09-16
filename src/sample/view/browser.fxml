@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1241.0" stylesheets="@../style/Style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.BrowserController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="800.0" style="-fx-background-color: #E6E0F8;" BorderPane.alignment="CENTER">
+         <items>
+            <JFXButton fx:id="btVoltar" alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="36.0" text="" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/baseline-arrow_back-black-18/2x/baseline_arrow_back_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btAvancar" layoutX="10.0" layoutY="11.0" text="">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/baseline-arrow_back-black-18/2x/baseline_arrow_back_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btRecarregar" layoutX="71.0" layoutY="11.0" text="">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/baseline-refresh-black-18/2x/baseline_refresh_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btHome" layoutX="122.0" layoutY="10.0" prefHeight="35.0" prefWidth="30.0" text="">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/baseline-home-black-18/2x/baseline_home_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Separator orientation="VERTICAL" prefHeight="30.0" />
+            <JFXTextField fx:id="tfUrl" prefHeight="26.0" prefWidth="784.0" promptText="URL">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <JFXButton fx:id="btSearch" text="Search">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/baseline-search-black-18/2x/baseline_search_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <Separator orientation="VERTICAL" prefHeight="30.0" />
+            <JFXButton fx:id="btFavorites" text="">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/baseline-favorite-black-18/2x/baseline_favorite_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btDownloads" layoutX="708.0" layoutY="10.0" text="">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/baseline-get_app-black-18/2x/baseline_get_app_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btHistory" layoutX="803.0" layoutY="10.0" text="">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/baseline-history-black-18/2x/baseline_history_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Separator layoutX="698.0" layoutY="10.0" orientation="VERTICAL" prefHeight="30.0" />
+            <JFXButton fx:id="btProfile" layoutX="820.0" layoutY="10.0" text="">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/baseline-account_circle-black-18/2x/baseline_account_circle_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btMore" layoutX="942.0" layoutY="10.0" text="">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/baseline-more_vert-black-18/2x/baseline_more_vert_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </items>
+      </ToolBar>
+   </top>
+   <center>
+      <JFXTabPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="410.0" prefWidth="800.0" style="-fx-background-color: #E6E0F8;" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab style="-fx-background-color: #585858;" text="Google">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <WebView fx:id="wvBrowser" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="2.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-background-color: #585858;" text="Facebook">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <WebView fx:id="wvBrowser1" prefHeight="520.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" disable="true">
+               <graphic>
+                  <JFXButton fx:id="btAddTab" alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="26.0" text="" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/baseline-add_circle-white-18/2x/baseline_add_circle_white_18dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </graphic>
+            </Tab>
+         </tabs>
+         <BorderPane.margin>
+            <Insets top="1.0" />
+         </BorderPane.margin>
+      </JFXTabPane>
+   </center>
+</BorderPane>
